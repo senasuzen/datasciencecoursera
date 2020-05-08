@@ -8,12 +8,9 @@ x$Date <- as.Date(x$Date, "%d/%m/%Y")
 
 # Filtered data
 x <- subset(x,Date >= as.Date("2007-2-1") & Date <= as.Date("2007-2-2"))
-
 x <- x[complete.cases(x),]
 
-# Combine Date and Time column
 dateTime <- paste(x$Date, x$Time)
-
 dateTime <- setNames(dateTime, "DateTime")
 
 # date and time columns
